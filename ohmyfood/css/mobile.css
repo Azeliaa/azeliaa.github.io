@@ -1,0 +1,29 @@
+header, h2 {
+  margin-bottom: 20px;
+}
+
+/*MENUS*/
+.menu {
+  width: 90%;
+  padding-top: 30px;
+}
+.menu__container {
+  width: 90%;
+}
+.menu .lines {
+  width: 90%;
+  margin-top: 10px;
+}
+.menu--note {
+  padding-top: unset;
+}
+.menu a {
+  font-size: 1.1rem;
+  margin: unset;
+}
+#legal_notice {
+  width: 90%;
+  font-size: 1rem;
+}
+
+/*# sourceMappingURL=mobile.css.map */

@@ -1,0 +1,492 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "metropolisextra_bold";
+  src: url("fonts/metropolis-extrabold-webfont.eot");
+  src: url("fonts/metropolis-extrabold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/metropolis-extrabold-webfont.woff2") format("woff2"), url("fonts/metropolis-extrabold-webfont.woff") format("woff"), url("fonts/metropolis-extrabold-webfont.ttf") format("truetype"), url("fonts/metropolis-extrabold-webfont.svg#metropolisextra_bold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "metropolisregular";
+  src: url("fonts/metropolis-regular-webfont.eot");
+  src: url("fonts/metropolis-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/metropolis-regular-webfont.woff2") format("woff2"), url("fonts/metropolis-regular-webfont.woff") format("woff"), url("fonts/metropolis-regular-webfont.ttf") format("truetype"), url("fonts/metropolis-regular-webfont.svg#metropolisregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "devonshireregular";
+  src: url("fonts/devonshire-regular-webfont.eot");
+  src: url("fonts/devonshire-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/devonshire-regular-webfont.woff2") format("woff2"), url("fonts/devonshire-regular-webfont.woff") format("woff"), url("fonts/devonshire-regular-webfont.ttf") format("truetype"), url("fonts/devonshire-regular-webfont.svg#devonshireregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "vinegarregular";
+  src: url("fonts/vinegar-regular-webfont.eot");
+  src: url("fonts/vinegar-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/vinegar-regular-webfont.woff2") format("woff2"), url("fonts/vinegar-regular-webfont.woff") format("woff"), url("fonts/vinegar-regular-webfont.ttf") format("truetype"), url("fonts/vinegar-regular-webfont.svg#vinegarregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "croissant_oneregular";
+  src: url("fonts/croissantone-regular-webfont.eot");
+  src: url("fonts/croissantone-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/croissantone-regular-webfont.woff2") format("woff2"), url("fonts/croissantone-regular-webfont.woff") format("woff"), url("fonts/croissantone-regular-webfont.ttf") format("truetype"), url("fonts/croissantone-regular-webfont.svg#croissant_oneregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "dancing_script_otregular";
+  src: url("fonts/dancingscript-regular-webfont.eot");
+  src: url("fonts/dancingscript-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/dancingscript-regular-webfont.woff2") format("woff2"), url("fonts/dancingscript-regular-webfont.woff") format("woff"), url("fonts/dancingscript-regular-webfont.ttf") format("truetype"), url("fonts/dancingscript-regular-webfont.svg#dancing_script_otregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "kaushan_scriptregular";
+  src: url("fonts/kaushanscript-regular-webfont.eot");
+  src: url("fonts/kaushanscript-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/kaushanscript-regular-webfont.woff2") format("woff2"), url("fonts/kaushanscript-regular-webfont.woff") format("woff"), url("fonts/kaushanscript-regular-webfont.ttf") format("truetype"), url("fonts/kaushanscript-regular-webfont.svg#kaushan_scriptregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "vremena_groteskregular";
+  src: url("fonts/vremenagrotesk-webfont.eot");
+  src: url("fonts/vremenagrotesk-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/vremenagrotesk-webfont.woff2") format("woff2"), url("fonts/vremenagrotesk-webfont.woff") format("woff"), url("fonts/vremenagrotesk-webfont.ttf") format("truetype"), url("fonts/vremenagrotesk-webfont.svg#vremena_groteskregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* INDEX.HTML */
+body {
+  margin: 0;
+}
+
+#main_wrapper {
+  min-height: 100vh;
+  /*La hauteur minimale de la page est celle du viewport*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#main_wrapper--page {
+  position: relative;
+}
+#main_wrapper--page footer {
+  position: fixed;
+  bottom: 0;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #579C87;
+  color: #FDCB46;
+  font-family: "metropolisextra_bold", Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+  margin: 0;
+  padding: 0;
+  height: 15vh;
+  min-height: 100px;
+  min-width: 1200px;
+}
+header a {
+  color: unset;
+  text-decoration: unset;
+}
+
+#menus {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  margin: 0;
+  padding: 0;
+  height: 70vh;
+  min-height: 465px;
+  min-width: 1400px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  min-height: 400px;
+  width: 20vw;
+  min-width: 325px;
+  box-shadow: 0px 0px 15px 5px #d0d0d0;
+  text-decoration: none;
+}
+.card--note {
+  background-color: #FCDFDB;
+}
+.card--chic {
+  background-color: #FFF5FE;
+}
+.card--délice {
+  background-color: #F9F9F9;
+}
+.card--palette {
+  background-color: #FDFFFD;
+}
+.card__title {
+  font-size: 2rem;
+}
+.card__title--note {
+  font-family: "devonshireregular", Arial, Helvetica, sans-serif;
+  color: #3C1218;
+}
+.card__title--chic {
+  font-family: "croissant_oneregular", Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  background: -webkit-linear-gradient(45deg, #C77412, #915DFC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.card__title--délice {
+  font-family: "dancing_script_otregular", Arial, Helvetica, sans-serif;
+  background: -webkit-linear-gradient(45deg, #0431DF, #0887FB);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.card__title--palette {
+  font-family: "kaushan_scriptregular", Arial, Helvetica, sans-serif;
+  background: -webkit-linear-gradient(45deg, #3D9339, #BFFF7E);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.card__menu {
+  font-size: 2.5rem;
+  margin: 0px;
+}
+.card__menu--note {
+  font-family: "Segoe Print", Arial, Helvetica, sans-serif;
+  color: #3C1218;
+}
+.card__menu--chic {
+  font-family: "vinegarregular", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #C77412;
+}
+.card__menu--délice {
+  font-family: "Segoe Print", Arial, Helvetica, sans-serif;
+  color: #0887FB;
+}
+.card__menu--palette {
+  font-family: "Segoe Print", Arial, Helvetica, sans-serif;
+  color: #72BF56;
+}
+
+.fa-music {
+  font-size: 3rem;
+  background: -webkit-linear-gradient(45deg, #F04A5E, #F79E7F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+  padding: 0;
+}
+
+.scale {
+  text-align: center;
+  transform: scale(1);
+  opacity: 1;
+  transition: transform ease-in-out 400ms, opacity ease-in-out 400ms;
+}
+.scale:hover {
+  transform: scale(1.15);
+  opacity: 0.65;
+}
+
+#btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 10vh;
+  min-height: 66px;
+  min-width: 1200px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  background-color: #579C87;
+  color: #FDCB46;
+  height: 50px;
+  line-height: 50px;
+  /* Me permet de centrer le texte dans le bloc sanc recréer une div */
+  width: 400px;
+  font-family: "metropolisregular", Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  box-shadow: unset;
+  text-decoration: none;
+  border-radius: 6px;
+}
+.btn #next {
+  margin-right: 10px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  background: #FDCB46;
+  border-radius: 50%;
+  align-self: flex-end;
+  margin: 0 2px;
+  margin-bottom: 14px;
+  animation: moving-dots 300ms alternate infinite;
+}
+.dot__2 {
+  animation-delay: 150ms;
+}
+.dot__3 {
+  animation-delay: 300ms;
+}
+
+@keyframes moving-dots {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-5px);
+  }
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 5vh;
+  width: 100%;
+  min-height: 33px;
+  min-width: 1200px;
+  background-color: #579C87;
+  color: #FDCB46;
+  font-family: "metropolisregular", Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+}
+footer a {
+  color: unset;
+  text-decoration: unset;
+  margin: 10px;
+}
+footer a:hover {
+  animation: wiggle 200ms ease-in-out infinite;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(3deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+/* MENUS */
+#page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  font-family: "vremena_groteskregular", Arial, Helvetica, sans-serif;
+  font-weight: unset;
+  margin: 40px 10px 30px 10px;
+  font-size: 2rem;
+}
+
+.lines {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 45vw;
+  margin-bottom: 20px;
+}
+.lines img {
+  width: 30%;
+  height: 20%;
+  padding-top: 10px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 0px 15px 5px #d0d0d0;
+  width: 60vw;
+  min-width: 600px;
+  min-height: 850px;
+  padding-bottom: 150px;
+  margin-bottom: 150px;
+}
+.menu__container {
+  width: 60vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+.menu p {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 15px;
+}
+.menu a {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.course {
+  width: 40vw;
+}
+
+.price {
+  text-align: right;
+  width: 5vw;
+  font-weight: bold;
+}
+
+/* NOTE.HTML */
+.menu--note {
+  font-family: "Segoe Print", Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  color: #3C1218;
+  background-color: #FCDFDB;
+}
+.menu--note a {
+  background: linear-gradient(to top, #3C1218 0%, #3C1218 2px, transparent 3px) no-repeat;
+}
+.menu .fa-music {
+  margin: 70px 0px 10px 0px;
+  font-size: 4rem;
+}
+.menu .card__title--note {
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 50px;
+}
+
+/* CHIC.HTML */
+.title {
+  margin-bottom: 50px;
+}
+.title--appétit {
+  color: #C67412;
+  background: linear-gradient(to top, #C67412 0%, #C67412 2px, transparent 3px) no-repeat;
+}
+.title--papilles {
+  color: #A56799;
+  background: linear-gradient(to top, #A56799 0%, #A56799 2px, transparent 3px) no-repeat;
+}
+.title--gourmandises {
+  color: #6E4CCC;
+  background: linear-gradient(to top, #6E4CCC 0%, #6E4CCC 2px, transparent 3px) no-repeat;
+}
+
+.menu--chic {
+  font-family: Cambria, Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
+  background-color: #FFF5FE;
+}
+.menu--chic .lines {
+  width: 55vw;
+}
+.menu--chic .lines img {
+  width: 33%;
+  height: 20%;
+}
+.menu--chic .lines a {
+  padding-top: 5px;
+}
+.menu .card__title--chic {
+  font-size: 3rem;
+  margin: 150px 0px;
+}
+.menu__container--appétit {
+  color: #C67412;
+}
+.menu__container--papilles {
+  color: #A56799;
+}
+.menu__container--gourmandises {
+  color: #6E4CCC;
+}
+
+/* DELICE.HTML */
+.title {
+  margin-bottom: 50px;
+}
+
+.menu--délice {
+  font-family: "Segoe Print", Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
+  color: #010101;
+  background-color: #F9F9F9;
+}
+.menu--délice a {
+  margin-bottom: 30px;
+  background: linear-gradient(to top, #010101 0%, #010101 2px, transparent 3px) no-repeat;
+}
+.menu .card__title--délice {
+  font-size: 5rem;
+  margin: 150px 0px;
+}
+
+/* PALETTE.HTML */
+.title {
+  margin-bottom: 50px;
+}
+
+.menu--palette {
+  font-family: "Segoe Print", Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
+  color: #010101;
+  background-color: #FDFFFD;
+}
+.menu--palette a {
+  margin-bottom: 50px;
+  background: linear-gradient(to top, #010101 0%, #010101 2px, transparent 3px) no-repeat;
+}
+.menu--palette .lines {
+  width: 55vw;
+}
+.menu--palette .lines img {
+  width: 35%;
+}
+.menu .card__title--palette {
+  font-size: 5rem;
+  margin: 100px 0px;
+}
+
+/* ANIMATION SOULIGNEMENT */
+.menu a {
+  background-size: 0 100%;
+  transition: background-size ease-in-out 600ms;
+}
+.menu a:hover {
+  background-size: 100% 100%;
+}
+
+/* MENTIONS LEGALES */
+#legal_notice {
+  width: 70vw;
+  padding-bottom: 150px;
+  text-align: justify;
+}
+
+/*# sourceMappingURL=style.css.map */

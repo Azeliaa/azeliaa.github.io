@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "metropolisextra_bold";
+  src: url("fonts/metropolis-extrabold-webfont.eot");
+  src: url("fonts/metropolis-extrabold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/metropolis-extrabold-webfont.woff2") format("woff2"), url("fonts/metropolis-extrabold-webfont.woff") format("woff"), url("fonts/metropolis-extrabold-webfont.ttf") format("truetype"), url("fonts/metropolis-extrabold-webfont.svg#metropolisextra_bold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+header {
+  font-family: "metropolisextra_bold", Arial, Helvetica, sans-serif;
+  color: red;
+}
+
+/*# sourceMappingURL=style.css.map */

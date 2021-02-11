@@ -1,0 +1,27 @@
+$primary : #F3E9F1;
+
+
+html {
+    min-height: 100%;
+    position: relative;
+    padding-bottom: 8rem;
+}
+
+.navbar, .footer {
+    background-color: $primary;
+}
+
+.navbar {
+    li a {
+        font-weight: bold;
+    }
+}
+
+.footer {
+    height: 5rem;
+    position: absolute;
+    bottom: 0;
+    li a {
+        color: #965EE1;
+    }
+}

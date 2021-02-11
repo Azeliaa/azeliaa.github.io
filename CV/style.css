@@ -1,0 +1,338 @@
+﻿@font-face {
+    font-family: 'lemon_milkregular';
+    src: url('fonts/lemonmilk-regular-webfont.eot');
+    src: url('fonts/lemonmilk-regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/lemonmilk-regular-webfont.woff2') format('woff2'), url('fonts/lemonmilk-regular-webfont.woff') format('woff'), url('fonts/lemonmilk-regular-webfont.ttf') format('truetype'), url('fonts/lemonmilk-regular-webfont.svg#lemon_milkregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('fonts/roboto-regular-webfont.eot');
+    src: url('fonts/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/roboto-regular-webfont.woff2') format('woff2'), url('fonts/roboto-regular-webfont.woff') format('woff'), url('fonts/roboto-regular-webfont.ttf') format('truetype'), url('fonts/roboto-regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#pic_responsive
+{
+    display:none;
+}
+
+#main_wrapper {
+    display: flex;
+    width: 1100px;
+    margin: auto;
+}
+
+p, h1, h2, h3, h4, ul {
+    font-family: robotoregular, Arial, "Arial Black", "Trebuchet MS", "Times New Roman", sans-serif;
+}
+
+ul
+{
+    list-style-type:square;
+}
+
+header
+{
+    margin-bottom:70px;
+    margin-top: 50px;
+}
+
+    header h1 {
+        font-family: lemon_milkregular, Arial, "Arial Black", "Trebuchet MS", "Times New Roman", sans-serif;
+        font-size: 3.5em;
+        font-weight: normal;
+        margin:0;
+    }
+    
+        #first_name
+        {
+            color: #673AB7;
+        }
+
+    header h2 {
+        margin:0px;
+        font-weight: normal;
+    }
+        #underline
+        {
+            text-decoration:underline;
+            text-decoration-color: #673AB7;
+        }
+
+#left_column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 450px;
+    background-color: #673AB7;
+    position:relative;
+}
+
+    #left_column img {
+        width: 216px;
+        align-self: center;
+    }
+
+    #left_column li {
+        list-style-type: none;
+        margin: 0 0 7px 0;
+        font-size: 0.95em;
+    }
+
+    .about p
+    {
+        width:250px;
+        margin:auto;
+        font-size:0.95em;
+        text-align: justify;
+    }
+
+    .left_section
+    {
+        width:100%;
+    }
+
+        .left_section h2 {
+            width: auto;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 1.3em;
+            background-color: black;
+            color: #673AB7;
+        }
+
+       .hobbies
+       {         
+           align-self: flex-end;
+           position:absolute;
+           bottom:20px;
+       }
+
+       .hobbies p
+       {
+           width:200px;
+           margin:auto;
+           display:flex;
+           justify-content:space-between;
+       }
+
+       .hobbies_icon
+       {
+           display:inline-block;
+           text-align: center;
+           font-size:2.5em;
+           height:55px;
+           width:55px;
+           border: 1px solid black;
+           border-radius:50%;
+       }
+
+      
+#right_column 
+{
+    width: 95%;
+    padding-left: 5%;
+}
+
+    section
+    {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+        article
+        {
+            padding-bottom: 20px;
+            display:flex;
+            flex-wrap:wrap;
+        }
+
+            article h2 {
+                font-weight: normal;
+                font-size: 1.5em;
+                text-transform: uppercase;
+                margin: 0 0 30px 0;
+                padding: 0 0 5px 0;
+                width: 100%;
+                border-bottom: 2px #673AB7 solid;
+            }
+
+                .fa
+                {
+                    color:#673AB7;
+                    font-weight:normal;
+                    font-size:1.4em;
+                    margin-right:10px;
+                }
+
+            .dot {
+                align-self: flex-start;
+                text-align: center;
+                width: 3%;
+                margin: 0;
+                padding: 4px 4px 0px 0px;
+                color: #673AB7;
+            }
+
+            .mini_dot
+            {
+                font-size: 0.5em;
+                padding-top: 6px;
+            }
+
+            .date_location {
+                width: 30%;
+                margin: 0;
+                padding: 0;
+            }
+
+            .description {
+                width: 66%;
+                align-self: flex-end;
+                margin: 0 0 20px 0;
+                padding: 0;
+            }
+
+            article h3
+            {
+                margin: 0 0 10px 0;
+                padding: 0;
+                text-transform:uppercase;
+                font-weight: normal;
+            }
+
+            article h4
+            {
+                margin:0;
+                padding:0;
+                font-weight: normal;
+                font-size:1.1em;
+            }
+
+            .skills
+            {
+                width:50%;
+            }
+            
+/* Responsive design*/
+
+@media screen and (max-width: 1280px) {
+    #main_wrapper {
+        flex-direction: column-reverse;
+        width: 100%;
+        min-width: 650px;
+        margin: 0;
+        padding: 0;
+    }
+
+    #pic_responsive {
+        display: block;
+        width: 216px;
+        margin: auto;
+    }
+
+    header {
+        text-align: center;
+        margin: 0 0 20px 0;
+    }
+
+        header h2 {
+            font-size: 1.8em;
+        }
+
+    #right_column {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
+    section {
+        margin: 0;
+        padding: 0;
+        font-size: 1.5em;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+        article h2{
+            font-size: 1.3em;
+            width:85%;
+            margin:auto;
+            margin-bottom: 30px;
+        }
+
+        article h4{
+            font-size: 1em;
+            font-style:italic;
+        }
+
+    .date_location {
+        width: 85%;
+        margin: auto;
+        margin-bottom: 25px;
+        padding-left:50px;
+        font-weight: bold;
+    }
+
+        .dot, .mini_dot {
+            display:none;
+        }
+
+    .description {
+        width: 45%;
+        margin: auto;
+        align-self: unset;
+        margin-bottom: 20px;
+    }
+
+    .skills{
+        width:45%;
+        margin:auto;
+        margin-bottom:20px;
+    }
+
+    #left_column {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        font-size: 1.5em;
+    }
+
+        #left_column img {
+            display: none;
+        }
+
+        #left_column li {
+            text-align: center;
+        }
+
+        #left_column ul {
+            padding: 0;
+        }
+
+    .about p {
+        width: 75%;
+    }
+
+
+    .hobbies {
+        position: unset;
+        margin-bottom: 20px;
+    }
+
+        .hobbies_icon{
+            font-size: 1.5em;
+        }
+}

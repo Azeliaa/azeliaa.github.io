@@ -1,0 +1,456 @@
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./base/fonts";
+
+
+/* INDEX.HTML */
+
+body{
+    margin: 0;
+}
+
+#main_wrapper{
+    min-height: 100vh; /*La hauteur minimale de la page est celle du viewport*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &--page{
+        position: relative;
+        footer{
+            position: fixed;
+            bottom: 0;
+        }
+    }    
+}
+
+header{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    @include colors; 
+    font-family: 'metropolisextra_bold', Arial, Helvetica, sans-serif;
+    font-size: 2.5rem;
+    @include padding-margin-none;
+    height: 15vh;
+    min-height: 100px;
+    min-width: 1200px;
+    a {
+        color:unset;
+        text-decoration: unset;
+    }
+}
+
+#menus{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    @include padding-margin-none;
+    height:70vh;
+    min-height: 465px;
+    min-width: 1400px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    min-height: 400px;
+    width: 20vw;
+    min-width: 325px;
+    box-shadow: $shadow;
+    text-decoration: none;
+    &--note{
+        background-color: $background-note;
+    }
+    &--chic{
+        background-color: $background-chic;
+    }
+    &--délice{
+        background-color: $background-délice;
+    }
+    &--palette{
+        background-color: $background-palette;
+    }
+    &__title{
+        font-size: 2rem;
+        &--note{
+            font-family: 'devonshireregular', Arial, Helvetica, sans-serif;
+            color: #3C1218;
+        }
+        &--chic{
+            font-family: 'croissant_oneregular', Arial, Helvetica, sans-serif;
+            font-size: 1.4rem;
+            background: -webkit-linear-gradient(45deg, #C77412, #915DFC);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        &--délice{
+            font-family: 'dancing_script_otregular', Arial, Helvetica, sans-serif;
+            background: -webkit-linear-gradient(45deg, #0431DF, #0887FB);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        &--palette{
+            font-family: 'kaushan_scriptregular', Arial, Helvetica, sans-serif;
+            background: -webkit-linear-gradient(45deg, #3D9339, #BFFF7E);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    &__menu{
+        font-size: 2.5rem;
+        margin: 0px;
+        &--note{
+            font-family: "Segoe Print", Arial, Helvetica, sans-serif;          
+            color: #3C1218;
+        }
+        &--chic{
+            font-family: 'vinegarregular', Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            color:#C77412;
+        }
+        &--délice{
+            font-family: "Segoe Print", Arial, Helvetica, sans-serif;
+            color:#0887FB;
+        }
+        &--palette{
+            font-family: "Segoe Print", Arial, Helvetica, sans-serif;
+            color:#72BF56;
+        }
+    }
+}
+
+.fa-music{
+    font-size: 3rem;
+    background: -webkit-linear-gradient(45deg, #F04A5E, #F79E7F);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+    @include padding-margin-none;
+}
+
+.scale{
+    text-align: center;
+    transform: scale(1);
+    opacity: 1;
+    transition: transform ease-in-out 400ms, opacity ease-in-out 400ms;
+    &:hover{
+        transform: scale(1.15);
+        opacity: 0.65;
+    }
+}
+
+#btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include padding-margin-none;
+    height:10vh;
+    min-height: 66px;
+    min-width: 1200px;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    @include colors;
+    height: 50px;
+    line-height: 50px; /* Me permet de centrer le texte dans le bloc sanc recréer une div */
+    width: 400px;
+    font-family: 'metropolisregular', Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    box-shadow: unset;
+    text-decoration: none;
+    border-radius: 6px;
+    #next{
+        margin-right: 10px;
+    }
+}
+
+.dot{
+    width: 6px;
+    height: 6px;
+    background: $color-secondary;
+    border-radius: 50%;
+    align-self: flex-end;
+    margin:0 2px;
+    margin-bottom: 14px; 
+    animation: moving-dots 300ms alternate infinite;
+    &__2{
+        animation-delay: 150ms;
+    }
+    &__3{
+        animation-delay: 300ms;
+    }
+
+}
+
+@keyframes moving-dots{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-5px);
+    }
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include padding-margin-none;
+    height:5vh;
+    width:100%;
+    min-height: 33px;
+    min-width: 1200px;
+    @include colors;
+    font-family: 'metropolisregular', Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    a{
+        color:unset;
+        text-decoration: unset;
+        margin:10px;
+        &:hover{
+            animation: wiggle 200ms ease-in-out infinite;
+        }
+    }
+}
+
+@keyframes wiggle {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(3deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    75% {
+      transform: rotate(-3deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+/* MENUS */
+
+#page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2{
+    font-family: 'vremena_groteskregular', Arial, Helvetica, sans-serif;
+    font-weight: unset;
+    margin: 40px 10px 30px 10px;
+    font-size: 2rem
+}
+
+.lines{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 45vw;
+    margin-bottom: 20px;
+    img {
+        width: 30%;
+        height: 20%;
+        padding-top: 10px;
+    }
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: $shadow;
+    width: 60vw;
+    min-width: 600px;
+    min-height: 850px;
+    padding-bottom: 150px;
+    margin-bottom: 150px;
+    &__container{
+        width: 60vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 70px;
+    }
+    p{
+        @include padding-margin-none;
+        margin-bottom: 15px;
+    }
+    a{
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+}
+
+.course{
+    width: 40vw;
+}
+
+.price{
+    text-align: right;
+    width: 5vw;
+    font-weight: bold;
+}
+
+/* NOTE.HTML */
+
+.menu{
+    &--note{
+    font-family: "Segoe Print", Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    color: #3C1218;
+    background-color: $background-note;
+    a {
+        background: linear-gradient(to top, #3C1218 0%, #3C1218 2px, transparent 3px) no-repeat;
+    }
+    }
+    
+    .fa-music{
+        margin: 70px 0px 10px 0px;
+        font-size: 4rem;
+    }
+    .card__title--note{
+        font-size: 4rem;
+        @include padding-margin-none;
+        margin-bottom: 50px;
+    }
+    
+}
+
+/* CHIC.HTML */
+
+.title{
+    margin-bottom:50px;
+    &--appétit{
+        color: #C67412;
+        background: linear-gradient(to top, #C67412 0%, #C67412 2px, transparent 3px) no-repeat;
+    }
+    &--papilles{
+        color: #A56799;
+        background: linear-gradient(to top, #A56799 0%, #A56799 2px, transparent 3px) no-repeat;
+    }
+    &--gourmandises{
+        color: #6E4CCC;
+        background: linear-gradient(to top, #6E4CCC 0%, #6E4CCC 2px, transparent 3px) no-repeat;
+    }
+
+}
+
+.menu{
+    &--chic{
+    font-family: Cambria, Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+    background-color: $background-chic;
+    .lines{
+        width: 55vw;
+        img{
+            width: 33%;
+            height: 20%;
+        }
+        a{
+            padding-top: 5px;
+        }
+    }
+    }
+    .card__title--chic{
+        font-size: 3rem;
+        margin: 150px 0px;
+    }
+    &__container{
+        &--appétit{
+            color: #C67412;
+        }
+        &--papilles{
+            color: #A56799;
+        }
+        &--gourmandises{
+            color: #6E4CCC;
+        }
+    }
+
+}
+
+/* DELICE.HTML */
+
+.title{
+    margin-bottom:50px;
+}
+
+.menu{
+    &--délice{
+    font-family: "Segoe Print", Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+    color: #010101;
+    background-color: $background-délice;
+    a{
+        margin-bottom: 30px;
+        background: linear-gradient(to top, #010101 0%, #010101 2px, transparent 3px) no-repeat;
+    }
+    }
+    .card__title--délice{
+        font-size: 5rem;
+        margin: 150px 0px;
+    }
+  
+}
+
+/* PALETTE.HTML */
+
+.title{
+    margin-bottom:50px;
+
+}
+
+.menu{
+    &--palette{
+    font-family: "Segoe Print", Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+    color: #010101;
+    background-color: $background-palette;
+    a{
+        margin-bottom: 50px;
+        background: linear-gradient(to top, #010101 0%, #010101 2px, transparent 3px) no-repeat;
+    }
+    .lines{
+        width: 55vw;
+        img{
+            width: 35%;
+        }
+    }
+    }
+    .card__title--palette{
+        font-size: 5rem;
+        margin: 100px 0px;
+    }
+      
+}
+
+/* ANIMATION SOULIGNEMENT */
+
+.menu a{
+    background-size: 0 100%;
+    transition: background-size ease-in-out 600ms;
+    &:hover{
+        background-size: 100% 100%;
+
+    }
+}
+
+/* MENTIONS LEGALES */
+
+#legal_notice{
+    width:70vw;
+    padding-bottom: 150px;
+    text-align: justify;
+}
+

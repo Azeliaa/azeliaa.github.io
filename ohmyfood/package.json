@@ -1,0 +1,23 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "Projet OC 3 ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Azeliaa/ohmyfood.git"
+  },
+  "keywords": [
+    "projet",
+    "ohmyfood"
+  ],
+  "author": "Elodie Medeiros",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Azeliaa/ohmyfood/issues"
+  },
+  "homepage": "https://github.com/Azeliaa/ohmyfood#readme"
+}

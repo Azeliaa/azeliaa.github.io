@@ -1,0 +1,500 @@
+@font-face {
+    font-family: 'raleway';
+    src: url('fonts/raleway-regular-webfont.eot');
+    src: url('fonts/raleway-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/raleway-regular-webfont.woff2') format('woff2'),
+         url('fonts/raleway-regular-webfont.woff') format('woff'),
+         url('fonts/raleway-regular-webfont.ttf') format('truetype'),
+         url('fonts/raleway-regular-webfont.svg#raleway') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+$margin: (medium: 1.5rem, small:1rem);
+$breakpoints: (mobile: 375px, tablet: 768px, laptop: 1024px, desktop: 1920px);
+
+$color-primary: #0065FC;
+$color-secondary: #DEEBFF;
+$color-tertiary: #F2F2F2;
+
+@mixin mobile {
+    @media screen and (min-width: map-get($breakpoints, mobile)){
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: map-get($breakpoints, tablet)){
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media screen and (min-width: map-get($breakpoints, laptop)){
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: map-get($breakpoints, desktop)){
+        @content;
+    }
+}
+
+@mixin links {
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+@mixin margin-padding-reset {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin card {
+    background-color: white;
+    margin : 15px 0px;
+    padding: 5px;
+    border-radius: 15px;
+    height: 130px;
+    box-shadow: $color-tertiary 2px 2px 5px;
+}
+
+@mixin popular__card--img {
+    border-radius: 15px 0px 0px 15px;
+    min-width: 110px;
+    @include mobile {
+        min-width: 130px;
+    }
+    @include tablet {
+        min-width: 200px;
+    }
+}
+
+@mixin lodging__card--img {
+    width: 100%;
+    height: 60%;
+    border-radius: 15px 15px 0px 0px; 
+    background-position: 0% 50%;
+ }
+
+ @mixin activities__card--img {
+    width: 100%;
+    height: 70%;
+    border-radius: 15px 15px 0px 0px; 
+ }
+
+html {
+    max-width: 100vw;
+}
+
+#main-wrapper {
+    font-family: raleway, 'Times New Roman', Times, serif, Helvetica, sans-serif;
+}
+
+/* TROUVER COMMENT FIXER LE HEADER EN HAUT DE LA PAGE TOUT EN VOYANT CORRECTEMENT LE CONTENU DE LA PAGE */
+
+header {
+    .header-heading {
+        display: flex;
+        justify-content: space-between;
+        img {
+            width: 5rem;
+            margin: map-get($margin, medium);
+        }
+        .login {
+            margin: map-get($margin, medium);
+            align-self: center;
+            @include links;
+            font-weight: bold;
+            color: $color-primary;
+            font-family: raleway, "Times New Roman", Helvetica, sans-serif;
+        }
+    }
+    .header-menu {
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 4px solid $color-tertiary;
+        li {
+            list-style-type: none;
+            width: 50%;
+            text-align: center;
+            margin: map-get($margin, small);
+        }
+        a {
+            @include links;
+            /* TROUVER COMMENT METTRE LIEN EN BLEU QUAND ON EST SUR HEBERGEMENT OU ACTIVITES */
+            &:hover {
+                color: $color-primary;
+            }
+        }
+    }
+}
+
+.search {
+    margin: map-get($margin, small);
+    &__h1 {
+        font-size: 1rem;
+        @include mobile {
+            font-size: 1.2rem;
+        }
+        font-weight: bolder;
+    }
+    &__h2 {
+        font-size: 0.9rem;
+        @include mobile {
+            font-size: 1rem;
+        }
+        font-weight: normal;
+    }
+    .searchbar-and-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include tablet {
+            justify-content: flex-start;
+        }
+        margin: 2.5rem 0rem;
+        .searchbar {
+            @include margin-padding-reset;
+            width: 60%;
+            height: 2.5rem;
+            border: 1px solid $color-secondary;
+            border-right-color: $color-tertiary;
+            padding-left: 10px;
+            font-weight: bolder;
+        }
+        .button, .marker {
+            height: 2.5rem;
+            width:2.5rem
+        }
+        .marker {
+            text-align: center;
+            line-height: 2.5rem;
+            background-color: $color-tertiary;
+            border-radius: 10px 0px 0px 10px;
+        }
+        .button {
+            border-radius: 10px;
+            border : 0px;
+            background-color: $color-primary;
+            color: white;
+        }
+    } 
+    .filters-title {
+        font-weight: bolder;
+    }
+    .filters {
+        margin: 2.5rem, 0rem;
+        font-weight: bolder;
+        display: flex;
+        flex-wrap: wrap;
+        &__btn {
+            @include links;
+            display: flex;
+            border: 2px solid $color-tertiary;
+            border-radius: 50px;
+            height: 2.5rem;
+            width: fit-content;
+            margin: 5px 5px;
+            p {
+                margin: 0px 15px;
+                line-height: 2.5rem;
+            }
+        }
+        &__logo {
+            color: $color-primary;
+            background-color: $color-secondary;
+            border-radius: 50px 50px;
+            width : 2.5rem;
+            height: 2.5rem;
+            text-align: center;
+            line-height: 2.5rem;
+        }
+    }
+    .info {
+        margin: 2.5rem, 0rem;
+        display: flex;
+        align-items: baseline;
+        &__logo {
+            min-height: 1.5rem;
+            min-width: 1.5rem;
+            border: 1px solid $color-tertiary;
+            border-radius: 50px 50px;
+            font-size: 0.8rem;
+            color: $color-primary;
+            text-align: center;
+            line-height: 1.5rem;
+            margin-right: 10px;
+        }
+    }
+}
+
+.section {
+    &__h2 {
+        font-size: 1.1rem;
+        @include mobile {
+            font-size: 1.5rem;
+        }
+    }
+    @include laptop {
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+    .popular {
+        @include laptop {
+            margin: 0px;
+            order: 2;
+            width: 39%;
+        }
+        padding: 20px;
+        margin:0%;
+        background-color: $color-tertiary;
+        &__title {
+            display: flex;
+            justify-content: space-between;
+            .fa-chart-line {
+                align-self: center;
+                font-size: 1.2rem;
+                @include mobile {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        &__card {
+            display: flex;
+            @include card;
+            
+            &--img-soleil {
+                @include popular__card--img;
+                background-image: url(../img/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg);
+                background-size: cover;
+                background-position: 50% 0%;               
+            }
+            &--img-coeur {
+                @include popular__card--img;
+                background-image: url(../img/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg);
+                background-size: cover;
+                background-position: 50% 0%;
+            }
+            &--img-bleu {
+                @include popular__card--img;
+                background-image: url(../img/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg);
+                background-size: cover;
+                background-position: 50% 50%;
+            }
+            &--text {
+                display: flex;
+                flex-direction: column;
+                margin: 10px;
+                position: relative;
+                &-title, .price {
+                    font-weight: bolder;
+                    font-size: 0.9rem;
+                    @include mobile{
+                        font-size: 1rem;
+                    }
+                }
+                &-price {
+                    font-size: 0.9rem;
+                    margin-top: 10px;
+                }
+                &-stars {
+                    font-size: 0.8rem;
+                    position: absolute;
+                    bottom: 0px;
+                    color: $color-tertiary;
+                    .blue {
+                        color: $color-primary;
+                    }
+                }
+            }
+        }
+    }
+    .lodging {
+        @include laptop {
+            margin: 0px;
+            order: 1;
+            width: 49%;
+            background-color: $color-tertiary;
+        }
+        padding: 20px;
+        margin:0%;
+        /* FAIRE UNE MIXIN DES REGLES CI-DESSUS CAR IDENTIQUE A .POPULAR */
+        .card-container {
+            @include tablet {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: stretch;
+                margin-bottom: 20px;
+            }
+        }
+        &__card {
+            @include card;
+            height: 200px;
+            @include tablet {
+                flex : 1 1 35%;
+            }
+            
+            &--img-cannebiere {
+                @include lodging__card--img;
+                background-image: url(../img/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg);
+                background-size: cover;
+            }
+            &--img-port {
+                @include lodging__card--img;
+                background-image: url(../img/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg);
+                background-size: cover;
+            }
+            &--img-mouettes {
+                @include lodging__card--img;
+                background-image: url(../img/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg);
+                background-size: cover;
+            }
+            &--img-mer {
+                @include lodging__card--img;
+                background-image: url(../img/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg);
+                background-size: cover;
+            }
+            &--img-panier {
+                @include lodging__card--img;
+                background-image: url(../img/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg);
+                background-size: cover;
+            }
+            &--img-amina {
+                @include lodging__card--img;
+                background-image: url(../img/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg);
+                background-size: cover;
+            }
+            &--text {
+                position: relative;
+                margin: 10px 20px;
+                &-title, .price {
+                    font-weight: bolder;
+                    margin-bottom: 5px;
+                }
+                &-price {
+                    font-size: 0.9rem;
+                    margin-bottom: 5px;
+                }
+                &-stars {
+                    font-size: 0.8rem;
+                    color: $color-tertiary;
+                    .blue {
+                        color: $color-primary;
+                    }
+                }
+                /* VOIR SI MIXIN POSSIBLE POUR REGLES --TEXT */
+            }
+        }
+        a {
+            @include links;
+            font-weight: bolder;
+        }
+    }
+    .activities {
+        @include tablet {
+            order: 3;
+        }
+        padding: 20px;
+        margin:0%;
+        /* FAIRE UNE MIXIN DES REGLES CI-DESSUS CAR IDENTIQUE A .POPULAR */
+        &-container {
+            @include tablet {
+                display: flex;
+                justify-content: space-around;
+            }
+        }
+        &__card {
+            @include card;
+            height: 200px;
+            &--img-port {
+                @include activities__card--img;
+                background-image: url(../img/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg);
+                background-size: cover;
+                @include tablet {
+                    height: 90%;
+                }
+            }
+            &--img-fort {
+                @include activities__card--img;
+                background-image: url(../img/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg);
+                background-size: cover;
+                background-position: 0% 50%;
+            }
+            &--img-frioul {
+                @include activities__card--img;
+                background-image: url(../img/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg);
+                background-size: cover;
+            }
+            &--img-calanques {
+                @include activities__card--img;
+                background-image: url(../img/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg);
+                background-size: cover;
+                @include tablet {
+                    height: 90%;
+                }
+            }
+            &--img-dame {
+                @include activities__card--img;
+                background-image: url(../img/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg);
+                background-size: cover;
+            }
+            &--img-longchamp {
+                @include activities__card--img;
+                background-image: url(../img/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg);
+                background-size: cover;
+                background-position: 0% 25%;
+            }
+            &--text {
+                display: flex;
+                font-weight: bolder;
+                margin: 0px 20px;
+                &-title {
+                    align-self: center;
+                }
+            }
+            @include tablet {
+                width: 300px;
+                &--large-card {
+                    height: 420px;
+                }
+            }
+        }
+        
+    }
+}
+
+footer {
+    background-color: $color-tertiary;
+    padding: 20px;
+    @include tablet {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    p {
+        font-weight: bolder;
+    }
+    ul {
+        @include margin-padding-reset;
+    }
+    li {
+        list-style-type: none;
+        margin-bottom: 15px;
+    }
+    a {
+        @include links;
+    }
+    .footer-links {
+        margin-bottom : 15px;
+        border: 1px solid $color-tertiary;
+    }
+}

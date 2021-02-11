@@ -1,0 +1,14 @@
+@mixin colors {
+    background-color: $color-primary;
+    color: $color-secondary;
+}
+
+@mixin padding-margin-none {
+    margin:0;
+    padding:0;
+}
+
+@mixin fonts-note {
+    font-family: 'devonshireregular', Arial, Helvetica, sans-serif;
+    color: #3C1218;
+}

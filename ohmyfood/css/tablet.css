@@ -1,0 +1,77 @@
+header {
+  min-width: unset;
+  min-height: unset;
+  height: 10vh;
+  font-size: 1.5rem;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+#menus {
+  min-width: unset;
+  min-height: unset;
+  width: 100%;
+}
+
+.card {
+  height: 70%;
+  width: 30%;
+  min-width: 300px;
+}
+
+.btn {
+  font-size: 1.5rem;
+  width: 300px;
+}
+
+.dot {
+  width: 4px;
+  height: 4px;
+}
+
+footer {
+  font-size: 1.2rem;
+}
+
+/* MENUS */
+h2 {
+  font-size: 1.5rem;
+}
+
+.lines {
+  margin-top: 30px;
+}
+
+.menu {
+  min-width: unset;
+  min-height: unset;
+  font-size: 0.9rem;
+  padding-bottom: 80px;
+  padding-top: 50px;
+  margin-bottom: 100px;
+}
+.menu__container {
+  margin-bottom: 10px;
+}
+.menu .card__title {
+  font-size: 2.2rem;
+  margin: 0;
+  padding: 0;
+}
+.menu a {
+  font-size: 1.2rem;
+}
+.menu .fa-music {
+  font-size: 2.5rem;
+  margin-top: 30px;
+}
+
+/* CHIC.HTML */
+.menu .card__title--chic {
+  font-size: 1.5rem;
+}
+
+/*# sourceMappingURL=tablet.css.map */
